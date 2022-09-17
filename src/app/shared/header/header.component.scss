@@ -1,0 +1,26 @@
+// colors of netflix to base up
+// black: #221F1F
+// red:  #E50914
+
+:root {
+    --black: #221f1f;
+    --red: #E50914;
+}
+
+mat-toolbar {
+    background: #221F1F;
+    color: #FFF;
+
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center
+}
+
+.alignment {
+    margin-bottom: 20px;
+}
