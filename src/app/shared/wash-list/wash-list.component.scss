@@ -1,3 +1,44 @@
 table {
     width: 90vw;
 }
+
+.mat-column-vehicle, 
+.mat-column-id, 
+.mat-column-startTime, 
+.mat-column-endTime, 
+.mat-column-price, 
+.mat-column-actions {
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.mat-column-vehicle, 
+.mat-column-id, 
+.mat-column-startTime, 
+.mat-column-endTime, 
+.mat-column-price {
+    border-right: 1px solid currentColor;
+}
+
+.mat-column-startTime, 
+.mat-column-endTime {
+    width: 10vw;
+}
+
+.mat-column-price {
+    width: 10vw;
+}
+
+.mat-column-id {
+    width: 0px;
+}
+
+.mat-column-actions, 
+.mat-column-vehicle {
+    text-align: left;
+}
+
+.mat-column-vehicle { 
+    width: 20vw;
+}

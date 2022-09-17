@@ -4,35 +4,35 @@ import { Washes } from 'src/app/models/washes.type';
 const FAKE_DATA: Washes[] = [
   { 
     id: 1, 
-    vehicle: 'Fiesta', 
+    vehicle: 'Fiesta Branco', 
     startTime: '07:00', 
     endTime: '08:00', 
     price: 50 
   },
   {
     id: 2,
-    vehicle: 'Gol',
+    vehicle: 'Gol Prata',
     startTime: '08:00',
     endTime: '09:00',
     price: 50.00
   },
   {
     id: 3,
-    vehicle: 'Ideia',
+    vehicle: 'Ideia Prata',
     startTime: '10:00',
     endTime: '11:00',
     price: 50.00
   },
   {
     id: 4,
-    vehicle: 'R3',
+    vehicle: 'R3 Branca',
     startTime: '11:00',
     endTime: '12:00',
     price: 40.00
   },  
   {
     id: 5,
-    vehicle: 'CG',
+    vehicle: 'CG Azul',
     startTime: '12:00',
     endTime: '13:00',
     price: 40.00
