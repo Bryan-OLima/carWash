@@ -4,4 +4,5 @@ export interface Washes {
     startTime: string;
     endTime: string;
     price: number;
+    obs: string;
 }

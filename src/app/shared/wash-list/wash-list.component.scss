@@ -7,7 +7,8 @@ table {
 .mat-column-startTime, 
 .mat-column-endTime, 
 .mat-column-price, 
-.mat-column-actions {
+.mat-column-actions,
+.mat-column-obs {
     font-size: 1.2rem;
     padding: 10px;
     text-align: center;
@@ -17,7 +18,8 @@ table {
 .mat-column-id, 
 .mat-column-startTime, 
 .mat-column-endTime, 
-.mat-column-price {
+.mat-column-price,
+.mat-column-actions {
     border-right: 1px solid currentColor;
 }
 
@@ -35,10 +37,26 @@ table {
 }
 
 .mat-column-actions, 
-.mat-column-vehicle {
+.mat-column-vehicle,
+.mat-column-obs {
     text-align: left;
 }
 
 .mat-column-vehicle { 
     width: 20vw;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    margin-bottom: -25px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
