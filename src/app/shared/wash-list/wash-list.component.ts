@@ -82,8 +82,7 @@ export class WashListComponent implements OnInit {
 
   openDialog(wash: Washes | null): void {
     let dialogRef = this.dialog.open(WashFormComponent, { 
-      width: '500px',
-      height: '400px',
+      width: '350px',
       data: wash === null ? {
         id: null,
         vehicle: '',

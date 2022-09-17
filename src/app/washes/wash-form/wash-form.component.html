@@ -1,40 +1,42 @@
-<h1 mat-dialog-title>Adicionar Lavagem</h1>
-<div mat-dialog-content>
+<section>
+    <h1 mat-dialog-title>Adicionar Lavagem</h1>
+    <div mat-dialog-content class="infos">
 
+    <p>Insira as infomações</p>
+    <mat-form-field appearance="fill">
+        <mat-label>Id</mat-label>
+        <input matInput [(ngModel)]="data.id" required>
+    </mat-form-field>
 
-  <p>Insira as infomações</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Id</mat-label>
-    <input matInput [(ngModel)]="data.id">
-  </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Veículo</mat-label>
+        <input matInput [(ngModel)]="data.vehicle" required>
+    </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Veículo</mat-label>
-    <input matInput [(ngModel)]="data.vehicle">
-  </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Entrada</mat-label>
+        <input matInput [(ngModel)]="data.startTime" required> 
+    </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Entrada</mat-label>
-    <input matInput [(ngModel)]="data.startTime">
-  </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Saída</mat-label>
+        <input matInput [(ngModel)]="data.endTime" required>
+    </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Saída</mat-label>
-    <input matInput [(ngModel)]="data.endTime">
-  </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Valor</mat-label>
+        <input matInput [(ngModel)]="data.price" required>
+    </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Valor</mat-label>
-    <input matInput [(ngModel)]="data.price">
-  </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>OBS</mat-label>
+        <input matInput [(ngModel)]="data.obs" required>
+    </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>OBS</mat-label>
-    <input matInput [(ngModel)]="data.obs">
-  </mat-form-field>
-</div>
+    <div mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancelar</button>
+    <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial color="primary">Ok</button>
+    </div>
 
-<div mat-dialog-actions>
-  <button mat-button (click)="onCancel()">Cancelar</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
-</div>
+</section>
