@@ -6,7 +6,6 @@ import { WashFormComponent } from 'src/app/washes/wash-form/wash-form.component'
 
 const FAKE_DATA: Washes[] = [
   { 
-    id: 1, 
     vehicle: 'Fiesta Branco', 
     startTime: '07:00', 
     endTime: '08:00', 
@@ -14,7 +13,6 @@ const FAKE_DATA: Washes[] = [
     obs: 'cliente tal'
   },
   {
-    id: 2,
     vehicle: 'Gol Prata',
     startTime: '08:00',
     endTime: '09:00',
@@ -22,7 +20,6 @@ const FAKE_DATA: Washes[] = [
     obs: 'pediu pra avisar no whats'
   },
   {
-    id: 3,
     vehicle: 'Ideia Prata',
     startTime: '10:00',
     endTime: '11:00',
@@ -30,7 +27,6 @@ const FAKE_DATA: Washes[] = [
     obs: 'esse é doido mesmo'
   },
   {
-    id: 4,
     vehicle: 'R3 Branca',
     startTime: '11:00',
     endTime: '12:00',
@@ -38,7 +34,6 @@ const FAKE_DATA: Washes[] = [
     obs: '17999999999'
   },  
   {
-    id: 5,
     vehicle: 'CG Azul',
     startTime: '12:00',
     endTime: '13:00',
@@ -46,7 +41,6 @@ const FAKE_DATA: Washes[] = [
     obs: 'ok' 
   },
   {
-    id: 6,
     vehicle: 'R3',
     startTime: '11:00',
     endTime: '12:00',
@@ -63,6 +57,12 @@ const FAKE_DATA: Washes[] = [
 export class WashListComponent implements OnInit {
   @ViewChild(MatTable)
   table!: MatTable<any>;
+
+  isDate: boolean = true;
+  date: any = new Date();
+ 
+  returnDate: any;
+
   displayedColumns: string[] = [
     'id',
     'vehicle',
@@ -74,17 +74,18 @@ export class WashListComponent implements OnInit {
   ];
   data = FAKE_DATA;
 
+
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
-
+    // this.getCompleteYear();
+    this.getDate();
   }
 
   openDialog(wash: Washes | null): void {
     let dialogRef = this.dialog.open(WashFormComponent, { 
       width: '350px',
       data: wash === null ? {
-        id: null,
         vehicle: '',
         startTime: '',
         endTime: '',
@@ -103,4 +104,35 @@ export class WashListComponent implements OnInit {
 
     console.log('clicked');
   }
+
+  getDate() {
+    if(this.isDate){
+      this.returnDate = this.date.toLocaleDateString(); 
+      return this.returnDate;
+    } else {
+      return 'falha ao carregar a data, tente atualizar a página'
+    }
+  }
+
+  // getCompleteYear() {
+  //   this.getDay();
+  //   this.getMonth();
+  //   this.getYear();
+
+  //   console.log(this.getCompleteYear());
+
+  //   return this.getDay(), '/', this.getMonth(), '/', this.getYear();
+  //   }
+
+  // getDay() {
+  //   this.dateSignature = this.dateSignature.getDate();
+  // }
+  
+  // getMonth() {
+  //   this.dateSignature = this.dateSignature.getMonth();
+  // }
+
+  // getYear() {
+  //   this.dateSignature = this.dateSignature.getFullyear();
+  // }
 }

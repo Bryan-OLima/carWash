@@ -61,3 +61,11 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.date {
+    display: flex;
+    justify-content: flex-end;
+    width: 94vw;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
